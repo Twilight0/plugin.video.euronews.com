@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 	<setting id="language" type="select" label="32200" lvalues="32201|32202|32203|32204|32205|32206|32207|32208|32209|32210|32211|32212" default="0" />
+	<setting id="quality_live" type="bool" label="32215" default="false"/>
+    <setting id="backup_live" type="bool" label="32216" default="false"/>
+    <setting type="sep"/>
+    <setting label="32217" type="action" action="RunPlugin(plugin://$ID/?action=clear_cache)" option="close"/>
 </settings>

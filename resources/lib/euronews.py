@@ -14,13 +14,15 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
+from __future__ import absolute_import, unicode_literals
 
-import urllib, json
-# noinspection PyUnresolvedReferences
+import json
 from tulip import cache, client, control, directory, workers
+from tulip.compat import urlencode, range
 
 
 class indexer:
+
     def __init__(self):
 
         self.list = []
@@ -111,62 +113,96 @@ class indexer:
         ]
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def programs(self):
-        self.list = cache.get(self.item_list_1, 24, self.programs_link, self.lang)
+        self.list = cache.get(self.programs_list, 24, self.programs_link, self.lang)
 
-        if self.list == None:
+        if self.list is None:
             return
 
-        for i in self.list: i.update({'action': 'videos'})
+        for i in self.list:
+            i.update({'action': 'videos'})
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def videos(self, url):
-        self.list = cache.get(self.item_list_2, 1, url, self.lang)
 
-        if self.list == None: return
+        self.list = cache.get(self.videos_list, 1, url, self.lang)
 
-        for i in self.list: i.update({'action': 'play', 'isFolder': 'False'})
+        if self.list is None:
+            return
+
+        for i in self.list:
+            i.update({'action': 'play', 'isFolder': 'False'})
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def play(self, url):
+
         directory.resolve(self.resolve(url, self.lang))
 
     def live(self):
-        directory.resolve(self.resolve_live(self.lang), meta={'title': 'Euronews'})
+
+        lang = 'www' if self.lang == 'en' else self.lang
+
+        stream = self.resolve_live(lang=lang)
+
+        directory.resolve(stream, meta={'title': 'Euronews'})
 
     def languages(self):
 
-        setting = control.setting('language')
+        lang_setting = control.setting('language')
 
-        if setting == '0':
-            langDict = {'French': 'fr', 'German': 'de', 'Greek': 'gr', 'Hungarian': 'hu', 'Italian': 'it',
-                        'Portuguese': 'pt', 'Russian': 'ru', 'Spanish': 'es', 'Turkish': 'tr', 'Ukrainian': 'ua'}
+        if lang_setting == '0':
+
+            langDict = {
+                'French': 'fr',
+                'German': 'de',
+                'Greek': 'gr',
+                'Hungarian': 'hu',
+                'Italian': 'it',
+                'Portuguese': 'pt',
+                'Russian': 'ru',
+                'Spanish': 'es',
+                'Turkish': 'tr',
+                'Ukrainian': 'ua'  #,
+                # 'Arabic': 'arabic',
+                # 'Persian': 'fa'
+            }
 
             try:
                 import xbmc
                 lang = langDict[xbmc.getLanguage(xbmc.ENGLISH_NAME).split(' ')[0]]
-            except:
+            except KeyError:
                 lang = 'en'
 
         else:
-            langDict = {'2': 'fr', '3': 'de', '4': 'gr', '5': 'hu', '6': 'it', '7': 'pt', '8': 'ru', '9': 'es', '10': 'tr', '11': 'ua'}
+            langDict = {
+                '2': 'fr',
+                '3': 'de',
+                '4': 'gr',
+                '5': 'hu',
+                '6': 'it',
+                '7': 'pt',
+                '8': 'ru',
+                '9': 'es',
+                '10': 'tr',
+                '11': 'ua'  #,
+                # '12': 'arabic',
+                # '13': 'fa'
+            }
 
             try:
-                lang = langDict[setting]
-            except:
+                lang = langDict[lang_setting]
+            except KeyError:
                 lang = 'en'
 
         return lang
 
-    def item_list_1(self, url, lang):
+    def programs_list(self, url, lang):
+
         try:
-            request = urllib.urlencode({'request': self.post_link % (url, lang)})
+            request = urlencode({'request': self.post_link % (url, lang)})
 
             result = client.request(self.api_link, post=request)
 
@@ -196,9 +232,9 @@ class indexer:
 
         return self.list
 
-    def item_list_2(self, url, lang):
+    def videos_list(self, url, lang):
         try:
-            request = urllib.urlencode({'request': self.post_link % (url, lang)})
+            request = urlencode({'request': self.post_link % (url, lang)})
 
             result = client.request(self.api_link, post=request)
 
@@ -234,15 +270,17 @@ class indexer:
                 pass
 
         threads = []
-        for i in range(0, len(self.list)): threads.append(workers.Thread(self.item_list_2_worker, i, lang))
+        for i in list(range(0, len(self.list))):
+            threads.append(workers.Thread(self.list_worker, i, lang))
         [i.start() for i in threads]
         [i.join() for i in threads]
 
-        self.list = [i for i in self.list if 'check' in i and not (i['check'] == '' or i['check'] == None)]
+        self.list = [i for i in self.list if 'check' in i and not (i['check'] == '' or i['check'] is None)]
 
         return self.list
 
-    def item_list_2_worker(self, i, lang):
+    def list_worker(self, i, lang):
+
         try:
             url = self.list[i]['url']
             check = self.resolve(url, lang)
@@ -251,10 +289,11 @@ class indexer:
             pass
 
     def resolve(self, url, lang):
+
         try:
             url = self.resolve_link % url
 
-            request = urllib.urlencode({'request': self.post_link % (url, lang)})
+            request = urlencode({'request': self.post_link % (url, lang)})
 
             result = client.request(self.api_link, post=request)
 
@@ -271,9 +310,16 @@ class indexer:
             result = json.loads(result)['url']
 
             result = client.request(result)
-            primary = json.loads(result)['primary']
+            if control.setting('backup_live') == 'false':
+                stream = json.loads(result)['primary']
+            else:
+                stream = json.loads(result)['backup']
 
-            return primary
+            if control.setting('quality_live') == 'false':
+                return stream
+            else:
+                from resources.lib.loader import m3u8_picker
+                return m3u8_picker(stream)
 
         except:
             pass

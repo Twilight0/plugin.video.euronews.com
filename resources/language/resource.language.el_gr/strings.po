@@ -7,6 +7,9 @@
 msgid ""
 msgstr ""
 
+msgctxt "#30402"
+msgid "Success"
+msgstr "Επιτυχία"
 
 msgctxt "#32001"
 msgid "Live"
@@ -99,3 +102,23 @@ msgstr "Τουρκικά"
 msgctxt "#32212"
 msgid "Ukrainian"
 msgstr "Ουκρανικά"
+
+msgctxt "#32213"
+msgid "Arabic"
+msgstr "Αραβικά"
+
+msgctxt "#32214"
+msgid "Persian"
+msgstr "Περσικά"
+
+msgctxt "#32215"
+msgid "Allow quality choice for live stream"
+msgstr "Επέτρεψε την επιλογή ποιότητας για την ζωντανή ροή"
+
+msgctxt "#32216"
+msgid "Play live backup stream"
+msgstr "Αναπαραγωγή εφεδρικής ζωντανής ροής"
+
+msgctxt "#32217"
+msgid "Clear function cache"
+msgstr "Εκκαθάριση προσωρινής μνήμης"

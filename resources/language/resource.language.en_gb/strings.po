@@ -7,6 +7,9 @@
 msgid ""
 msgstr ""
 
+msgctxt "#30402"
+msgid "Success"
+msgstr ""
 
 msgctxt "#32001"
 msgid "Live"
@@ -98,4 +101,24 @@ msgstr ""
 
 msgctxt "#32212"
 msgid "Ukrainian"
+msgstr ""
+
+msgctxt "#32213"
+msgid "Arabic"
+msgstr ""
+
+msgctxt "#32214"
+msgid "Persian"
+msgstr ""
+
+msgctxt "#32215"
+msgid "Allow quality choice for live stream"
+msgstr ""
+
+msgctxt "#32216"
+msgid "Play live backup stream"
+msgstr ""
+
+msgctxt "#32217"
+msgid "Clear function cache"
 msgstr ""

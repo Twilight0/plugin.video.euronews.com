@@ -14,21 +14,17 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
+from __future__ import absolute_import
 
-
-import urlparse,sys
-
+from sys import argv
+from tulip.compat import parse_qsl
 from resources.lib import euronews
 
-
-params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
-
+params = dict(parse_qsl(argv[2].replace('?','')))
 action = params.get('action')
-
 url = params.get('url')
 
-
-if action == None:
+if action is None:
     euronews.indexer().root()
 
 elif action == 'programs':
@@ -43,4 +39,6 @@ elif action == 'live':
 elif action == 'play':
     euronews.indexer().play(url)
 
-
+elif action == 'clear_cache':
+    from tulip.cache import clear
+    clear(withyes=False)

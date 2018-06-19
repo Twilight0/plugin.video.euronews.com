@@ -17,6 +17,9 @@ msgstr ""
 "Language: he_IL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "#30402"
+msgid "Success"
+msgstr "נִצָחוֹן"
 
 msgctxt "#32001"
 msgid "Live"
@@ -109,3 +112,23 @@ msgstr "טורקית"
 msgctxt "#32212"
 msgid "Ukrainian"
 msgstr "אוקראינית"
+
+msgctxt "#32213"
+msgid "Arabic"
+msgstr "עֲרָבִית"
+
+msgctxt "#32214"
+msgid "Persian"
+msgstr "פַּרסִית"
+
+msgctxt "#32215"
+msgid "Allow quality choice for live stream"
+msgstr "אפשר בחירת איכות עבור שידור חי"
+
+msgctxt "#32216"
+msgid "Play live backup stream"
+msgstr "הפעל זרם גיבוי חי"
+
+msgctxt "#32217"
+msgid "Clear function cache"
+msgstr "נקה מטמון של פונקציה"
