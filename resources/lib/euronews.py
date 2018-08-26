@@ -309,7 +309,8 @@ class indexer:
             result = client.request(self.live_link.format(lang))
             result = json.loads(result)['url']
 
-            if result.startswith('//'): result = 'http:' + result
+            if result.startswith('//'):
+                result = 'http:' + result
 
             result = client.request(result)
             if control.setting('backup_live') == 'false':
@@ -317,7 +318,8 @@ class indexer:
             else:
                 stream = json.loads(result)['backup']
 
-            if stream.startswith('//'): stream = 'http:' + stream
+            if stream.startswith('//'):
+                stream = 'http:' + stream
 
             if control.setting('quality_live') == 'false':
                 return stream
