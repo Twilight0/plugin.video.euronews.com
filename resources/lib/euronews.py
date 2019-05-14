@@ -35,7 +35,7 @@ class indexer:
         self.resolve_link = '"methodName":"content.getArticle","params":{"id":"%s"}'
         self.post_link = '{%s,"apiKey":"windows8Euronews-1.0","language":"%s"}'
         self.live_link = 'http://{0}.euronews.com/api/watchlive.json'
-        self.img_link = 'http://static.euronews.com/articles/programs/650x365_%s'
+        self.img1_link = 'http://static.euronews.com/articles/programs/650x365_%s'
         self.img2_link = 'http://static.euronews.com/articles/%s/650x365_%s.jpg'
         self.lang = self.languages()
 
@@ -43,84 +43,97 @@ class indexer:
 
         self.list = [
             {
-                'title': 32001,
+                'title': control.lang(32001),
                 'action': 'live',
                 'isFolder': 'False',
                 'icon': 'live.png'
-            },
-
+            }
+            ,
             {
-                'title': 32002,
+                'title': control.lang(32002),
                 'action': 'videos',
                 'url': self.top_link,
                 'icon': 'top.png'
-            },
-
+            }
+            ,
             {
-                'title': 32003,
+                'title': control.lang(32003),
                 'action': 'videos',
                 'url': self.theme_link % '1',
                 'icon': 'news.png'
-            },
-
+            }
+            ,
             {
-                'title': 32004,
+                'title': control.lang(32004),
                 'action': 'videos',
                 'url': self.theme_link % '8',
                 'icon': 'sports.png'
-            },
-
+            }
+            ,
             {
-                'title': 32005,
+                'title': control.lang(32005),
                 'action': 'videos',
                 'url': self.theme_link % '7',
                 'icon': 'business.png'
-            },
-
+            }
+            ,
             {
-                'title': 32006,
+                'title': control.lang(32006),
                 'action': 'videos',
                 'url': self.theme_link % '5',
                 'icon': 'europe.png'
-            },
-
+            }
+            ,
             {
-                'title': 32007,
+                'title': control.lang(32007),
                 'action': 'videos',
                 'url': self.theme_link % '2',
                 'icon': 'culture.png'
-            },
-
+            }
+            ,
             {
-                'title': 32008,
+                'title': control.lang(32008),
                 'action': 'videos',
                 'url': self.theme_link % '3',
                 'icon': 'scitech.png'
-            },
-
+            }
+            ,
             {
-                'title': 32009,
+                'title': control.lang(32009),
                 'action': 'videos',
-                'url': self.theme_link % '4',
-                'icon': 'environment.png'
-            },
-
+                'url': self.theme_link % '21',
+                'icon': 'travel.png'
+            }
+            ,
             {
-                'title': 32010,
+                'title': control.lang(32010),
                 'action': 'programs',
                 'icon': 'programs.png'
+            }
+            ,
+            {
+                'title': control.lang(32221),
+                'action': 'settings',
+                'isFolder': 'False',
+                'isPlayable': 'False'
             }
         ]
 
         directory.add(self.list, content='videos')
 
     def programs(self):
+
         self.list = cache.get(self.programs_list, 24, self.programs_link, self.lang)
 
         if self.list is None:
             return
 
         for i in self.list:
+
+            if i['title'][0].islower():
+
+                i.update({'title': i['title'].capitalize()})
+
             i.update({'action': 'videos'})
 
         directory.add(self.list, content='videos')
@@ -147,7 +160,24 @@ class indexer:
 
         stream = self.resolve_live(lang=lang)
 
-        directory.resolve(stream, meta={'title': 'Euronews'})
+        if control.setting('quality_live') == '2' and int(
+                control.infoLabel('System.AddonVersion({0})'.format('xbmc.python')).replace('.', '')
+        ) >= 2260:
+
+            dash = True
+            manifest_type = 'hls'
+            mimetype= 'application/vnd.apple.mpegurl'
+
+        else:
+
+            dash = False
+            manifest_type = None
+            mimetype = None
+
+        directory.resolve(
+            stream, meta={'title': 'Euronews'}, dash=dash, manifest_type=manifest_type,
+            mimetype=mimetype
+        )
 
     def languages(self):
 
@@ -202,6 +232,7 @@ class indexer:
     def programs_list(self, url, lang):
 
         try:
+
             request = urlencode({'request': self.post_link % (url, lang)})
 
             result = client.request(self.api_link, post=request)
@@ -209,11 +240,15 @@ class indexer:
             result = json.loads(result)
 
             items = result['programs']
+
         except:
+
             return
 
         for item in items:
+
             try:
+
                 title = item['title']
                 title = client.replaceHTMLCodes(title)
                 title = title.encode('utf-8')
@@ -223,17 +258,21 @@ class indexer:
                 url = url.encode('utf-8')
 
                 image = item['img']
-                image = self.img_link % image
+                image = self.img1_link % image
                 image = image.encode('utf-8')
 
                 self.list.append({'title': title, 'url': url, 'image': image})
+
             except:
+
                 pass
 
         return self.list
 
     def videos_list(self, url, lang):
+
         try:
+
             request = urlencode({'request': self.post_link % (url, lang)})
 
             result = client.request(self.api_link, post=request)
@@ -250,11 +289,15 @@ class indexer:
 
             elif 'homelist' in result:
                 items = result['homelist']
+
         except:
+
             return
 
         for item in items:
+
             try:
+
                 title = item['title']
                 title = client.replaceHTMLCodes(title)
                 title = title.encode('utf-8')
@@ -266,7 +309,9 @@ class indexer:
                 image = image.encode('utf-8')
 
                 self.list.append({'title': title, 'url': url, 'image': image})
+
             except:
+
                 pass
 
         threads = []
@@ -282,15 +327,19 @@ class indexer:
     def list_worker(self, i, lang):
 
         try:
+
             url = self.list[i]['url']
             check = self.resolve(url, lang)
             self.list[i].update({'check': check})
+
         except:
+
             pass
 
     def resolve(self, url, lang):
 
         try:
+
             url = self.resolve_link % url
 
             request = urlencode({'request': self.post_link % (url, lang)})
@@ -300,12 +349,15 @@ class indexer:
             url = json.loads(result)['articlelist']['videoUri']
 
             return url
+
         except:
+
             pass
 
     def resolve_live(self, lang):
 
         try:
+
             result = client.request(self.live_link.format(lang))
             result = json.loads(result)['url']
 
@@ -313,19 +365,22 @@ class indexer:
                 result = 'http:' + result
 
             result = client.request(result)
+
             if control.setting('backup_live') == 'false':
                 stream = json.loads(result)['primary']
             else:
                 stream = json.loads(result)['backup']
 
             if stream.startswith('//'):
-                stream = 'http:' + stream
 
-            if control.setting('quality_live') == 'false':
+                stream = ''.join(['http:', stream])
+
+            if control.setting('quality_live') in ['0', '2']:
                 return stream
             else:
                 from resources.lib.loader import m3u8_picker
                 return m3u8_picker(stream)
 
         except:
+
             pass

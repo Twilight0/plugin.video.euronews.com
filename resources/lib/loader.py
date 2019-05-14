@@ -28,7 +28,9 @@ def stream_picker(qualities, urls):
     choice = control.selectDialog(heading=control.name(), list=qualities)
 
     if choice <= len(qualities) and not choice == -1:
+
         popped = urls[choice]
+
         return popped
 
 
@@ -45,12 +47,17 @@ def m3u8_picker(url):
     for playlist in m3u8_playlists:
 
         quality = repr(playlist.stream_info.resolution).strip('()').replace(', ', 'x')
+
         if quality == 'None':
             quality = 'Auto'
         uri = playlist.uri
+
         if not uri.startswith('http'):
+
             uri = urljoin(playlist.base_uri, uri)
+
         qualities.append(quality)
+
         urls.append(uri)
 
     return stream_picker(qualities, urls)

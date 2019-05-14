@@ -54,8 +54,8 @@ msgid "Sci-tech"
 msgstr "מדע בדיוני"
 
 msgctxt "#32009"
-msgid "Environment"
-msgstr "סביבה"
+msgid "Travel"
+msgstr "לִנְסוֹעַ"
 
 msgctxt "#32010"
 msgid "Programmes"
@@ -122,7 +122,7 @@ msgid "Persian"
 msgstr "פַּרסִית"
 
 msgctxt "#32215"
-msgid "Allow quality choice for live stream"
+msgid "Live stream quality choice"
 msgstr "אפשר בחירת איכות עבור שידור חי"
 
 msgctxt "#32216"
@@ -132,3 +132,19 @@ msgstr "הפעל זרם גיבוי חי"
 msgctxt "#32217"
 msgid "Clear function cache"
 msgstr "נקה מטמון של פונקציה"
+
+msgctxt "#32218"
+msgid "Best"
+msgstr "Βέλτιστη"
+
+msgctxt "#32219"
+msgid "Manual"
+msgstr "Χειροκίνητη"
+
+msgctxt "#32220"
+msgid "Adaptive (Leia+ only, fallbacks to manual otherwise)"
+msgstr "מסתגלת (ליה Leia+, נופלת חזרה ידנית אחרת)"
+
+msgctxt "#32221"
+msgid "Settings"
+msgstr "תִקוּן"

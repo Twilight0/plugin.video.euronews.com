@@ -44,7 +44,7 @@ msgid "Sci-tech"
 msgstr ""
 
 msgctxt "#32009"
-msgid "Environment"
+msgid "Travel"
 msgstr ""
 
 msgctxt "#32010"
@@ -112,7 +112,7 @@ msgid "Persian"
 msgstr ""
 
 msgctxt "#32215"
-msgid "Allow quality choice for live stream"
+msgid "Live stream quality choice"
 msgstr ""
 
 msgctxt "#32216"
@@ -121,4 +121,20 @@ msgstr ""
 
 msgctxt "#32217"
 msgid "Clear function cache"
+msgstr ""
+
+msgctxt "#32218"
+msgid "Best"
+msgstr ""
+
+msgctxt "#32219"
+msgid "Manual"
+msgstr ""
+
+msgctxt "#32220"
+msgid "Adaptive (Leia+ only, fallbacks to manual otherwise)"
+msgstr ""
+
+msgctxt "#32221"
+msgid "Settings"
 msgstr ""

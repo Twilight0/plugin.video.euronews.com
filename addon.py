@@ -42,3 +42,7 @@ elif action == 'play':
 elif action == 'clear_cache':
     from tulip.cache import clear
     clear(withyes=False)
+
+elif action == 'settings':
+    from tulip.control import openSettings
+    openSettings()
