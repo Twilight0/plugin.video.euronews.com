@@ -132,7 +132,7 @@ msgid "Manual"
 msgstr ""
 
 msgctxt "#32220"
-msgid "Adaptive (Leia+ only, fallbacks to manual otherwise)"
+msgid "Adaptive (Leia+ only, fallbacks to best otherwise)"
 msgstr ""
 
 msgctxt "#32221"

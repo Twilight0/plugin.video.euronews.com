@@ -133,7 +133,7 @@ msgstr "Χειροκίνητη"
 
 msgctxt "#32220"
 msgid "Adaptive (Leia+ only, fallbacks to manual otherwise)"
-msgstr "Μεταβλητή (Leia+ μόνο, γυρνάει σε χειροκίνητο αλλιώς)"
+msgstr "Μεταβλητή (Leia+ μόνο, γυρνάει σε βέλτιστο αλλιώς)"
 
 msgctxt "#32221"
 msgid "Settings"

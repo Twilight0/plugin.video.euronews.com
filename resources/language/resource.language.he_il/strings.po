@@ -142,8 +142,8 @@ msgid "Manual"
 msgstr "Χειροκίνητη"
 
 msgctxt "#32220"
-msgid "Adaptive (Leia+ only, fallbacks to manual otherwise)"
-msgstr "מסתגלת (ליה Leia+, נופלת חזרה ידנית אחרת)"
+msgid "Adaptive (Leia+ only, fallbacks to best otherwise)"
+msgstr "הסתגלות ליה + בלבד, נופל בחזרה אחרת"
 
 msgctxt "#32221"
 msgid "Settings"
