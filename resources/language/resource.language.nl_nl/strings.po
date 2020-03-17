@@ -1,0 +1,140 @@
+# Kodi Media Center language file
+# Addon Name: Euronews
+# Addon id: plugin.video.euronews.com
+# Addon version: 1.0.0
+# Addon Provider: lambda
+
+msgid ""
+msgstr ""
+
+msgctxt "#30402"
+msgid "Success"
+msgstr "Succesvol"
+
+msgctxt "#32001"
+msgid "Live"
+msgstr "Live"
+
+msgctxt "#32002"
+msgid "Top Stories"
+msgstr "Topverhalen"
+
+msgctxt "#32003"
+msgid "News"
+msgstr "Nieuws"
+
+msgctxt "#32004"
+msgid "Sport"
+msgstr "Sport"
+
+msgctxt "#32005"
+msgid "Business"
+msgstr "Business"
+
+msgctxt "#32006"
+msgid "Europe"
+msgstr "Europa"
+
+msgctxt "#32007"
+msgid "Culture"
+msgstr "Kultuur"
+
+msgctxt "#32008"
+msgid "Sci-tech"
+msgstr "Wetenschap en technologie"
+
+msgctxt "#32009"
+msgid "Travel"
+msgstr "Reizen"
+
+msgctxt "#32010"
+msgid "Programmes"
+msgstr "Programmas"
+
+msgctxt "#32200"
+msgid "Language"
+msgstr "Taal"
+
+msgctxt "#32201"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "#32202"
+msgid "English"
+msgstr "Engels"
+
+msgctxt "#32203"
+msgid "French"
+msgstr "Frans"
+
+msgctxt "#32204"
+msgid "German"
+msgstr "Duits"
+
+msgctxt "#32205"
+msgid "Greek"
+msgstr "Grieks"
+
+msgctxt "#32206"
+msgid "Hungarian"
+msgstr "Hongaars"
+
+msgctxt "#32207"
+msgid "Italian"
+msgstr "Italiaans"
+
+msgctxt "#32208"
+msgid "Portuguese"
+msgstr "Portugees"
+
+msgctxt "#32209"
+msgid "Russian"
+msgstr "Russisch"
+
+msgctxt "#32210"
+msgid "Spanish"
+msgstr "Spaans"
+
+msgctxt "#32211"
+msgid "Turkish"
+msgstr "Turks"
+
+msgctxt "#32212"
+msgid "Ukrainian"
+msgstr "Oekraïens"
+
+msgctxt "#32213"
+msgid "Arabic"
+msgstr "Arabisch"
+
+msgctxt "#32214"
+msgid "Persian"
+msgstr "Perzisch"
+
+msgctxt "#32215"
+msgid "Live stream quality choice"
+msgstr "Live stream kwaliteitskeuze"
+
+msgctxt "#32216"
+msgid "Play live backup stream"
+msgstr "Speel live backup stream"
+
+msgctxt "#32217"
+msgid "Clear function cache"
+msgstr "Leeg functie cache"
+
+msgctxt "#32218"
+msgid "Best"
+msgstr "Best"
+
+msgctxt "#32219"
+msgid "Manual"
+msgstr "Manueel"
+
+msgctxt "#32220"
+msgid "Adaptive (Leia+ only, fallbacks to best otherwise)"
+msgstr "Adaptief (enkel Leia+, valt terug naar Best)"
+
+msgctxt "#32221"
+msgid "Settings"
+msgstr "Instellingen"
