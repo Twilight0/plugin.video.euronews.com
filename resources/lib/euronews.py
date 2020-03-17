@@ -160,9 +160,7 @@ class indexer:
 
         stream = self.resolve_live(lang=lang)
 
-        if control.setting('quality_live') == '2' and int(
-                control.infoLabel('System.AddonVersion({0})'.format('xbmc.python')).replace('.', '')
-        ) >= 2260:
+        if control.setting('quality_live') == '2' and control.kodi_version() >= 18.0:
 
             dash = True
             manifest_type = 'hls'
