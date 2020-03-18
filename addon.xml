@@ -12,10 +12,13 @@
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en_GB">Euronews addon for Kodi</summary>
         <summary lang="he_il">הרחבת Euronews עבור קודי</summary>
+        <summary lang="ru_RU">Дополнение Euronews для Kodi</summary>
         <description lang="en_GB">Euronews, the most watched news channel in Europe, covers international news in various languages.[CR]With 400 journalists from more than 30 nationalities, Euronews offers a unique, independent and totally impartial perspective on world events.[CR]Available languages: English, French, German, Greek, Hungarian, Italian, Portuguese, Russian, Spanish, Turkish and Ukrainian</description>
         <description lang="he_il">Euronews הוא ערוץ החדשות הפופולרי ביותר באירופה, כולל חדשות בינלאומיות בשפות שונות.[CR]עם 400 עיתונאים מיותר מ -30 לאומים, מציע נקודת מבט ייחודית, עצמאית ונטולת פניות לחלוטין על אירועי העולם .[CR]שפות זמינות: אנגלית, צרפתית, גרמנית, יוונית, הונגרית, איטלקית, פורטוגזית, רוסית, ספרדית, טורקית ואוקראינית</description>
+        <description lang="ru_RU">Euronews - самый популярный новостной канал в Европе, освещающий международные новости на разных языках.[CR]С 400 журналистами из более чем 30 национальностей, Euronews предлагает уникальный, независимый и абсолютно беспристрастный взгляд на мировые события.[CR]Доступные языки: английский, французский, немецкий, греческий, венгерский, итальянский, португальский, русский, испанский, турецкий и украинский</description>
         <disclaimer lang="en_GB">This addon is not published nor endorsed by euronews.com</disclaimer>
         <disclaimer lang="he_il">ההרחבה הזו לא פורסמה ולא נתמכת על ידי euronews.com</disclaimer>
+        <disclaimer lang="ru_RU">Это дополнение не опубликовано и не одобрено euronews.com</disclaimer>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <source>https://github.com/Twilight0/plugin.video.euronews.com</source>
         <website>http://www.euronews.com/</website>
