@@ -1,0 +1,140 @@
+# Kodi Media Center language file
+# Addon Name: Euronews
+# Addon id: plugin.video.euronews.com
+# Addon version: 1.0.0
+# Addon Provider: lambda
+
+msgid ""
+msgstr ""
+
+msgctxt "#30402"
+msgid "Success"
+msgstr "Успешно"
+
+msgctxt "#32001"
+msgid "Live"
+msgstr "Прямая трансляция"
+
+msgctxt "#32002"
+msgid "Top Stories"
+msgstr "Главные новости"
+
+msgctxt "#32003"
+msgid "News"
+msgstr "Новости"
+
+msgctxt "#32004"
+msgid "Sport"
+msgstr "Спорт"
+
+msgctxt "#32005"
+msgid "Business"
+msgstr "Бизнес"
+
+msgctxt "#32006"
+msgid "Europe"
+msgstr "Европа"
+
+msgctxt "#32007"
+msgid "Culture"
+msgstr "Культура"
+
+msgctxt "#32008"
+msgid "Sci-tech"
+msgstr "Sci-tech"
+
+msgctxt "#32009"
+msgid "Travel"
+msgstr "Путешествия"
+
+msgctxt "#32010"
+msgid "Programmes"
+msgstr "Программы"
+
+msgctxt "#32200"
+msgid "Language"
+msgstr "Язык"
+
+msgctxt "#32201"
+msgid "Automatic"
+msgstr "Автоматически"
+
+msgctxt "#32202"
+msgid "English"
+msgstr "Английский"
+
+msgctxt "#32203"
+msgid "French"
+msgstr "Французский"
+
+msgctxt "#32204"
+msgid "German"
+msgstr "Немецкий"
+
+msgctxt "#32205"
+msgid "Greek"
+msgstr "Греческий"
+
+msgctxt "#32206"
+msgid "Hungarian"
+msgstr "Венгерский"
+
+msgctxt "#32207"
+msgid "Italian"
+msgstr "Итальянский"
+
+msgctxt "#32208"
+msgid "Portuguese"
+msgstr "Португальский"
+
+msgctxt "#32209"
+msgid "Russian"
+msgstr "Русский"
+
+msgctxt "#32210"
+msgid "Spanish"
+msgstr "Испанский"
+
+msgctxt "#32211"
+msgid "Turkish"
+msgstr "Турецкий"
+
+msgctxt "#32212"
+msgid "Ukrainian"
+msgstr "Украинский"
+
+msgctxt "#32213"
+msgid "Arabic"
+msgstr "Арабский"
+
+msgctxt "#32214"
+msgid "Persian"
+msgstr "Персидский"
+
+msgctxt "#32215"
+msgid "Live stream quality choice"
+msgstr "Качество прямой трансляции"
+
+msgctxt "#32216"
+msgid "Play live backup stream"
+msgstr "Воспроизводить резервный поток прямой трансляции"
+
+msgctxt "#32217"
+msgid "Clear function cache"
+msgstr "Очистить кеш"
+
+msgctxt "#32218"
+msgid "Best"
+msgstr "Лучшее"
+
+msgctxt "#32219"
+msgid "Manual"
+msgstr "Вручную"
+
+msgctxt "#32220"
+msgid "Adaptive (Leia+ only, fallbacks to best otherwise)"
+msgstr "Адаптивное (только Leia+, иначе использовать лучшее)"
+
+msgctxt "#32221"
+msgid "Settings"
+msgstr "Настройки"
