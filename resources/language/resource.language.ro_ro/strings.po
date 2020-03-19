@@ -1,0 +1,141 @@
+# Kodi Media Center language file
+# Addon Name: Euronews
+# Addon id: plugin.video.euronews.com
+# Addon version: 1.0.0
+# Addon Provider: lambda
+# Romanian translation: tmihai20
+
+msgid ""
+msgstr ""
+
+msgctxt "#30402"
+msgid "Success"
+msgstr "Succes"
+
+msgctxt "#32001"
+msgid "Live"
+msgstr "În direct"
+
+msgctxt "#32002"
+msgid "Top Stories"
+msgstr "Știri de top"
+
+msgctxt "#32003"
+msgid "News"
+msgstr "Știri"
+
+msgctxt "#32004"
+msgid "Sport"
+msgstr "Sport"
+
+msgctxt "#32005"
+msgid "Business"
+msgstr "Afaceri"
+
+msgctxt "#32006"
+msgid "Europe"
+msgstr "Europa"
+
+msgctxt "#32007"
+msgid "Culture"
+msgstr "Cultură"
+
+msgctxt "#32008"
+msgid "Sci-tech"
+msgstr "Știință și tehnologie"
+
+msgctxt "#32009"
+msgid "Travel"
+msgstr "Călătorii"
+
+msgctxt "#32010"
+msgid "Programmes"
+msgstr "Programe"
+
+msgctxt "#32200"
+msgid "Language"
+msgstr "Limbă"
+
+msgctxt "#32201"
+msgid "Automatic"
+msgstr "Automatic"
+
+msgctxt "#32202"
+msgid "English"
+msgstr "Engleză"
+
+msgctxt "#32203"
+msgid "French"
+msgstr "Franceză"
+
+msgctxt "#32204"
+msgid "German"
+msgstr "Germană"
+
+msgctxt "#32205"
+msgid "Greek"
+msgstr "Greacă"
+
+msgctxt "#32206"
+msgid "Hungarian"
+msgstr "Ungară"
+
+msgctxt "#32207"
+msgid "Italian"
+msgstr "Italiană"
+
+msgctxt "#32208"
+msgid "Portuguese"
+msgstr "Portugheză"
+
+msgctxt "#32209"
+msgid "Russian"
+msgstr "Rusă"
+
+msgctxt "#32210"
+msgid "Spanish"
+msgstr "Spaniolă"
+
+msgctxt "#32211"
+msgid "Turkish"
+msgstr "Turcă"
+
+msgctxt "#32212"
+msgid "Ukrainian"
+msgstr "Ucraineană"
+
+msgctxt "#32213"
+msgid "Arabic"
+msgstr "Arabă"
+
+msgctxt "#32214"
+msgid "Persian"
+msgstr "Persană"
+
+msgctxt "#32215"
+msgid "Live stream quality choice"
+msgstr "Alegere calitate flux în direct"
+
+msgctxt "#32216"
+msgid "Play live backup stream"
+msgstr "Redă copie de siguranță a fluxului în direct"
+
+msgctxt "#32217"
+msgid "Clear function cache"
+msgstr "Șterge cache-ul funcțiilor"
+
+msgctxt "#32218"
+msgid "Best"
+msgstr "Cel mai bun"
+
+msgctxt "#32219"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "#32220"
+msgid "Adaptive (Leia+ only, fallbacks to best otherwise)"
+msgstr "Adaptabil (doar de la Kodi Leia sau mai nou, altfel calitatea cea mai bună)"
+
+msgctxt "#32221"
+msgid "Settings"
+msgstr "Setări"
