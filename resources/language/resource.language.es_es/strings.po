@@ -9,132 +9,132 @@ msgstr ""
 
 msgctxt "#30402"
 msgid "Success"
-msgstr ""
+msgstr "Realizado correctamente"
 
 msgctxt "#32001"
 msgid "Live"
-msgstr ""
+msgstr "En directo"
 
 msgctxt "#32002"
 msgid "Top Stories"
-msgstr ""
+msgstr "Mejores historias"
 
 msgctxt "#32003"
 msgid "News"
-msgstr ""
+msgstr "Noticias"
 
 msgctxt "#32004"
 msgid "Sport"
-msgstr ""
+msgstr "Deporte"
 
 msgctxt "#32005"
 msgid "Business"
-msgstr ""
+msgstr "Negocios"
 
 msgctxt "#32006"
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 msgctxt "#32007"
 msgid "Culture"
-msgstr ""
+msgstr "Cultura"
 
 msgctxt "#32008"
 msgid "Sci-tech"
-msgstr ""
+msgstr "Ciencia-Tecnología"
 
 msgctxt "#32009"
 msgid "Travel"
-msgstr ""
+msgstr "Viaje"
 
 msgctxt "#32010"
 msgid "Programmes"
-msgstr ""
+msgstr "Programas"
 
 msgctxt "#32200"
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 msgctxt "#32201"
 msgid "Automatic"
-msgstr ""
+msgstr "Automático"
 
 msgctxt "#32202"
 msgid "English"
-msgstr ""
+msgstr "Inglés"
 
 msgctxt "#32203"
 msgid "French"
-msgstr ""
+msgstr "Francés"
 
 msgctxt "#32204"
 msgid "German"
-msgstr ""
+msgstr "Alemán"
 
 msgctxt "#32205"
 msgid "Greek"
-msgstr ""
+msgstr "Griego"
 
 msgctxt "#32206"
 msgid "Hungarian"
-msgstr ""
+msgstr "Húngaro"
 
 msgctxt "#32207"
 msgid "Italian"
-msgstr ""
+msgstr "Italiano"
 
 msgctxt "#32208"
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugués"
 
 msgctxt "#32209"
 msgid "Russian"
-msgstr ""
+msgstr "Ruso"
 
 msgctxt "#32210"
 msgid "Spanish"
-msgstr ""
+msgstr "Español"
 
 msgctxt "#32211"
 msgid "Turkish"
-msgstr ""
+msgstr "Turco"
 
 msgctxt "#32212"
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ucraniano"
 
 msgctxt "#32213"
 msgid "Arabic"
-msgstr ""
+msgstr "Arábico"
 
 msgctxt "#32214"
 msgid "Persian"
-msgstr ""
+msgstr "Persa"
 
 msgctxt "#32215"
 msgid "Live stream quality choice"
-msgstr ""
+msgstr "Calidad de la transmisión en directo"
 
 msgctxt "#32216"
 msgid "Play live backup stream"
-msgstr ""
+msgstr "Reproducir backup de transmisión en directo"
 
 msgctxt "#32217"
 msgid "Clear function cache"
-msgstr ""
+msgstr "Limpiar caché de funciones"
 
 msgctxt "#32218"
 msgid "Best"
-msgstr ""
+msgstr "La mejor posible"
 
 msgctxt "#32219"
 msgid "Manual"
-msgstr ""
+msgstr "Manual"
 
 msgctxt "#32220"
 msgid "Adaptive (Leia+ only, fallbacks to best otherwise)"
-msgstr ""
+msgstr "Adaptativo (Solo Leia o superior, volver a La mejor si no es posible)"
 
 msgctxt "#32221"
 msgid "Settings"
-msgstr ""
+msgstr "Ajustes"
