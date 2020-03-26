@@ -25,7 +25,7 @@ msgstr "Noticias"
 
 msgctxt "#32004"
 msgid "Sport"
-msgstr "Deporte"
+msgstr "Deportes"
 
 msgctxt "#32005"
 msgid "Business"
