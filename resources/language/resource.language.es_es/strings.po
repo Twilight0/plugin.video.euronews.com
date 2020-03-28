@@ -1,0 +1,140 @@
+# Kodi Media Center language file
+# Addon Name: Euronews
+# Addon id: plugin.video.euronews.com
+# Addon version: 1.0.0
+# Addon Provider: lambda
+
+msgid ""
+msgstr ""
+
+msgctxt "#30402"
+msgid "Success"
+msgstr "Realizado correctamente"
+
+msgctxt "#32001"
+msgid "Live"
+msgstr "En directo"
+
+msgctxt "#32002"
+msgid "Top Stories"
+msgstr "Mejores historias"
+
+msgctxt "#32003"
+msgid "News"
+msgstr "Noticias"
+
+msgctxt "#32004"
+msgid "Sport"
+msgstr "Deportes"
+
+msgctxt "#32005"
+msgid "Business"
+msgstr "Negocios"
+
+msgctxt "#32006"
+msgid "Europe"
+msgstr "Europa"
+
+msgctxt "#32007"
+msgid "Culture"
+msgstr "Cultura"
+
+msgctxt "#32008"
+msgid "Sci-tech"
+msgstr "Ciencia-Tecnología"
+
+msgctxt "#32009"
+msgid "Travel"
+msgstr "Viaje"
+
+msgctxt "#32010"
+msgid "Programmes"
+msgstr "Programas"
+
+msgctxt "#32200"
+msgid "Language"
+msgstr "Idioma"
+
+msgctxt "#32201"
+msgid "Automatic"
+msgstr "Automático"
+
+msgctxt "#32202"
+msgid "English"
+msgstr "Inglés"
+
+msgctxt "#32203"
+msgid "French"
+msgstr "Francés"
+
+msgctxt "#32204"
+msgid "German"
+msgstr "Alemán"
+
+msgctxt "#32205"
+msgid "Greek"
+msgstr "Griego"
+
+msgctxt "#32206"
+msgid "Hungarian"
+msgstr "Húngaro"
+
+msgctxt "#32207"
+msgid "Italian"
+msgstr "Italiano"
+
+msgctxt "#32208"
+msgid "Portuguese"
+msgstr "Portugués"
+
+msgctxt "#32209"
+msgid "Russian"
+msgstr "Ruso"
+
+msgctxt "#32210"
+msgid "Spanish"
+msgstr "Español"
+
+msgctxt "#32211"
+msgid "Turkish"
+msgstr "Turco"
+
+msgctxt "#32212"
+msgid "Ukrainian"
+msgstr "Ucraniano"
+
+msgctxt "#32213"
+msgid "Arabic"
+msgstr "Arábico"
+
+msgctxt "#32214"
+msgid "Persian"
+msgstr "Persa"
+
+msgctxt "#32215"
+msgid "Live stream quality choice"
+msgstr "Calidad de la transmisión en directo"
+
+msgctxt "#32216"
+msgid "Play live backup stream"
+msgstr "Reproducir backup de transmisión en directo"
+
+msgctxt "#32217"
+msgid "Clear function cache"
+msgstr "Limpiar caché de funciones"
+
+msgctxt "#32218"
+msgid "Best"
+msgstr "La mejor posible"
+
+msgctxt "#32219"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "#32220"
+msgid "Adaptive (Leia+ only, fallbacks to best otherwise)"
+msgstr "Adaptativo (Solo Leia o superior, volver a La mejor si no es posible)"
+
+msgctxt "#32221"
+msgid "Settings"
+msgstr "Ajustes"
