@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.euronews.com" version="1.4.0" name="Euronews" provider-name="Twilight0">
+<addon id="plugin.video.euronews.com" version="1.4.1" name="Euronews" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.5.10"/>
@@ -26,7 +26,12 @@
         <source>https://github.com/Twilight0/plugin.video.euronews.com</source>
         <website>http://www.euronews.com/</website>
         <size>351600</size>
-        <news>[B]1.4.0[/B]
+        <news>[B]1.4.1[/B]
+- Add de_DE translation (contrib. horstle)
+- Add hr_HR translation (contrib. arvvoid)
+- Add no_NO translation (contrib. solbu)
+
+[B]1.4.0[/B]
 - Add es_ES translation (contrib. roliverosc)
 - Add ro_RO translation (contrib. tmihai20)
 - Add nl_NL translation (contrib. dagwieers)
