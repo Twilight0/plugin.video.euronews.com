@@ -2,7 +2,7 @@
 # Addon Name: Euronews
 # Addon id: plugin.video.euronews.com
 # Addon version: 1.0.0
-# Addon Provider: lambda
+# Addon Provider: Twilight0
 msgid ""
 msgstr ""
 "Project-Id-Version: plugin.video.euronews.com 1.4.0\n"

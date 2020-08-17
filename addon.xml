@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.euronews.com" version="1.4.1" name="Euronews" provider-name="Twilight0">
+<addon id="plugin.video.euronews.com" version="1.4.2" name="Euronews" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.5.10"/>
+        <import addon="script.module.tulip" version="2.6.11"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -22,11 +22,16 @@
         <disclaimer lang="he_il">ההרחבה הזו לא פורסמה ולא נתמכת על ידי euronews.com</disclaimer>
         <disclaimer lang="ru_RU">Это дополнение не опубликовано и не одобрено euronews.com</disclaimer>
         <disclaimer lang="es_ES">Este complemento no está publicado ni respaldado por euronews.com</disclaimer>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.euronews.com</source>
         <website>http://www.euronews.com/</website>
         <size>351600</size>
-        <news>[B]1.4.1[/B]
+        <news>[B]1.4.2[/B]
+- Bumped dependencies
+- Some minor tweaks here and there
+- Notify if geoblocking is applied by the live stream server
+
+[B]1.4.1[/B]
 - Add de_DE translation (contrib. horstle)
 - Add hr_HR translation (contrib. arvvoid)
 - Add no_NO translation (contrib. solbu)

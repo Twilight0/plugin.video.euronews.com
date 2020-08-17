@@ -1,23 +1,18 @@
 # -*- coding: utf-8 -*-
 
 '''
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+    Euronews Addon
+    Author Twilight0
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    SPDX-License-Identifier: GPL-3.0-only
+    See LICENSES/GPL-3.0-only for more information.
 '''
+
 from __future__ import absolute_import, unicode_literals
 
 import json
 from tulip import cache, client, control, directory, workers
+from tulip.log import log_debug
 from tulip.compat import urlencode, range
 
 
@@ -26,17 +21,17 @@ class indexer:
     def __init__(self):
 
         self.list = []
-        self.base_link = 'http://www.euronews.com'
-        self.api_link = 'http://api.euronews.com/ipad/'
+        self.base_link = 'https://www.euronews.com'
+        self.api_link = 'https://api.euronews.com/ipad/'
         self.top_link = '"methodName":"content.getHome","params":{}'
         self.programs_link = '"methodName":"content.getPrograms","params":{}'
         self.program_link = '"methodName":"content.getProgramDetails","params":{"pId":"%s"}'
         self.theme_link = '"methodName":"content.getThemeDetails","params":{"tId":"%s"}'
         self.resolve_link = '"methodName":"content.getArticle","params":{"id":"%s"}'
         self.post_link = '{%s,"apiKey":"windows8Euronews-1.0","language":"%s"}'
-        self.live_link = 'http://{0}.euronews.com/api/watchlive.json'
-        self.img1_link = 'http://static.euronews.com/articles/programs/650x365_%s'
-        self.img2_link = 'http://static.euronews.com/articles/%s/650x365_%s.jpg'
+        self.live_link = 'https://{0}.euronews.com/api/watchlive.json'
+        self.img1_link = 'https://static.euronews.com/articles/programs/650x365_%s'
+        self.img2_link = 'https://static.euronews.com/articles/%s/650x365_%s.jpg'
         self.lang = self.languages()
 
     def root(self):
@@ -336,49 +331,47 @@ class indexer:
 
     def resolve(self, url, lang):
 
-        try:
+        url = self.resolve_link % url
 
-            url = self.resolve_link % url
+        request = urlencode({'request': self.post_link % (url, lang)})
 
-            request = urlencode({'request': self.post_link % (url, lang)})
+        result = client.request(self.api_link, post=request)
 
-            result = client.request(self.api_link, post=request)
+        url = json.loads(result)['articlelist']['videoUri']
 
-            url = json.loads(result)['articlelist']['videoUri']
-
-            return url
-
-        except:
-
-            pass
+        return url
 
     def resolve_live(self, lang):
 
+        result = client.request(self.live_link.format(lang), error=True)
+        result = json.loads(result)['url']
+
+        if result.startswith('//'):
+            result = 'http:' + result
+
+        result = client.request(result, error=True)
+
+        _json = json.loads(result)
+
         try:
+            if _json.get('status') == 'ko':
+                control.infoDialog(_json.get('msg').capitalize(), time=5000)
+                log_debug(_json.get('msg').capitalize())
+                return
+        except Exception:
+            return
 
-            result = client.request(self.live_link.format(lang))
-            result = json.loads(result)['url']
+        if control.setting('backup_live') == 'false':
+            stream = _json['primary']
+        else:
+            stream = _json['backup']
 
-            if result.startswith('//'):
-                result = 'http:' + result
+        if stream.startswith('//'):
 
-            result = client.request(result)
+            stream = ''.join(['http:', stream])
 
-            if control.setting('backup_live') == 'false':
-                stream = json.loads(result)['primary']
-            else:
-                stream = json.loads(result)['backup']
-
-            if stream.startswith('//'):
-
-                stream = ''.join(['http:', stream])
-
-            if control.setting('quality_live') in ['0', '2']:
-                return stream
-            else:
-                from resources.lib.loader import m3u8_picker
-                return m3u8_picker(stream)
-
-        except:
-
-            pass
+        if control.setting('quality_live') in ['0', '2']:
+            return stream
+        else:
+            from resources.lib.loader import m3u8_picker
+            return m3u8_picker(stream)
